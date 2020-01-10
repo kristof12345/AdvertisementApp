@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="944f979c4ff7405fa96005b86fe5d003" Name="Diagram1" ZoomLevel="91">
+        <EntityTypeShape EntityType="AdvertisementDBModel.Advertisements" Width="1.75" PointX="5.875" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvertisementDBModel.AspNetRoles" Width="1.75" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvertisementDBModel.AspNetUserLogins" Width="1.75" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvertisementDBModel.Categories" Width="1.5" PointX="4.625" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvertisementDBModel.Details" Width="1.5" PointX="8.375" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvertisementDBModel.Images" Width="1.5" PointX="7" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvertisementDBModel.MetaDetails" Width="1.5" PointX="8.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvertisementDBModel.SubscriptionModels" Width="2" PointX="5.125" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvertisementDBModel.Subscriptions" Width="1.75" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvertisementDBModel.Users" Width="2" PointX="3" PointY="4.625" IsExpanded="true" />
+        <AssociationConnector Association="AdvertisementDBModel.FK_Advertisements_Categories_CategoryId" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="AdvertisementDBModel.FK_Advertisements_Users_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvertisementDBModel.FK_Details_Advertisements_AdvertisementId" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvertisementDBModel.FK_Images_Advertisements_AdvertisementId" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvertisementDBModel.FK_AspNetUserLogins_Users_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvertisementDBModel.FK_Details_MetaDetails_MetaId" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvertisementDBModel.FK_Subscriptions_SubscriptionModels_ModelId" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvertisementDBModel.FK_Subscriptions_Users_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvertisementDBModel.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

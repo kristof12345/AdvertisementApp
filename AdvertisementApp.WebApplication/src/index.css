@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+
+/* Common */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.center {
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .search-row input,
+  .search-row select {
+    border-radius: 0;
+  }
+
+  .search-row input:first-child {
+    border-radius: 0.25rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .search-row button {
+    border-radius: 0.25rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.gallery h1,
+.gallery h2,
+.gallery h3,
+.gallery h4,
+.gallery h5,
+.gallery h6 {
+  color: black;
+}
+
+.card-body h5 {
+  color: black;
+}
+
+.highlighted {
+  border-width: 3px !important;
+  border-color: red !important;
+}
+
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+p {
+  color: #7d7d7d;
+  font-size: 14px;
+  line-height: 2;
+  font-weight: 600;
+}
+
+a {
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  text-decoration: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+a:hover,
+a:focus {
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  text-decoration: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+ul,
+ol {
+  margin: 0;
+}
+ul li,
+ol li {
+  list-style: none;
+}
+
+/* Forms */
+
+.form-control {
+  background-color: transparent;
+  width: 100%;
+  height: 38px;
+  border-radius: 0;
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 30px;
+  font-weight: 500;
+  padding: 0 15px;
+  border: 1px solid #e1dddd;
+}
+.form-control:hover,
+.form-control:focus {
+  background-color: transparent;
+  box-shadow: none;
+  border: 1px solid #e1dddd;
+}
+
+/* Form */
+.labeled-form {
+  position: relative;
+  z-index: 1;
+  padding: 10px 50px;
+  margin-top: 60px;
+  border: 1px solid #e1dddd;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+}
+@media only screen and (max-width: 767px) {
+  .advanced-search-form {
+    padding: 30px 20px;
+  }
+}
+.labeled-form .form-title {
+  position: absolute;
+  width: 260px;
+  height: 45px;
+  background-color: #947054;
+  top: -46px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  padding: 0 40px;
+  text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  .labeled-form .form-title {
+    width: 210px;
+    padding: 0 15px;
+  }
+}
+.labeled-form .form-title p {
+  margin-bottom: 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 45px;
+  font-weight: 600;
+}
+.Collapsible {
+  text-align: center;
+}
+.Collapsible__trigger {
+  font-size: 1rem;
+  color: #007e33;
+  cursor: pointer;
+}
+
+.react-datepicker-wrapper {
+  margin-right: 16px;
+}
+
+/* Image Gallery */
+
+.gallery {
+  padding: 40px;
+}
+
+.gallery .lightbox img {
+  width: 100%;
+  margin-bottom: 30px;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.gallery .lightbox img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gallery img {
+  border-radius: 4px;
+}
+
+/* Pricing Tables */
+
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+.subscriptions {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+}
+.subscriptions img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: -1;
+}
+.subscriptions .plan {
+  margin: 5px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #442232;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  background-color: #5f3047;
+  border-radius: 8px 8px 8px 8px;
+  padding: 0px;
+}
+.subscriptions .plan:hover i,
+.subscriptions .plan.hover i {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.subscriptions * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+.subscriptions header {
+  background-color: #5f3047;
+  color: #ffffff;
+}
+.subscriptions .plan-title {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  margin: 0;
+  padding: 20px 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.subscriptions .plan-title:after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 40px 300px 0 0;
+  border-color: rgba(0, 0, 0, 0.5) transparent transparent;
+}
+.subscriptions .plan-cost {
+  padding: 40px 20px 10px;
+  text-align: right;
+}
+.subscriptions .plan-price {
+  font-weight: 600;
+  font-size: 3em;
+}
+.subscriptions .plan-type {
+  opacity: 0.8;
+  font-size: 0.7em;
+  text-transform: uppercase;
+}
+.subscriptions .plan-features {
+  padding: 0 0 10px;
+  margin: 0;
+  text-align: left;
+}
+.subscriptions .plan-features li {
+  padding: 8px 5%;
+}
+.subscriptions .plan-features i {
+  margin-right: 8px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.subscriptions .plan-select {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+}
+.subscriptions .plan-select a {
+  background-color: #442232;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 20px;
+  font-size: 0.75em;
+  font-weight: 600;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  display: inline-block;
+}
+.subscriptions .plan-select a:hover {
+  background-color: #552a3f;
+}
+.subscriptions .featured {
+  margin-top: -10px;
+  border-color: #331926;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  border-radius: 8px;
+}
+.subscriptions .featured .plan-select {
+  padding: 30px 20px;
+}
+@media only screen and (max-width: 767px) {
+  .subscriptions .plan {
+    width: 50%;
+  }
+  .subscriptions .plan-title,
+  .subscriptions .plan-select a {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  .subscriptions .plan-select,
+  .subscriptions .featured .plan-select {
+    padding: 20px;
+  }
+  .subscriptions .featured {
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 440px) {
+  .subscriptions .plan {
+    width: 100%;
+  }
+}

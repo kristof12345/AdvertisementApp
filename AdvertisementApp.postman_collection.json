@@ -1,0 +1,283 @@
+{
+	"info": {
+		"_postman_id": "80b203c3-feb0-4446-9952-fa2cef854e10",
+		"name": "AdvertisementApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAdvertisements",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b8beb197-7a82-4324-adf2-657153592c67",
+						"exec": [
+							"pm.test(\"Test empty collection\", function(){",
+							"    pm.response.to.have.status(200);",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.length).eql(0);",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/advertisements",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"advertisements"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostAdvertisementWithoutLogin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "200ac234-a0f3-4ff0-b0a9-c972f956e484",
+						"exec": [
+							"pm.test(\"Test unauthorized\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"categoryId\": 1,\n    \"description\": \"Szép ház.\",\n    \"details\": [\n        {\n            \"id\": 1,\n            \"name\": \"Estate type\",\n            \"stringValue\": \"House\",\n            \"numberValue\": 0,\n            \"type\": 2\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Number of rooms\",\n            \"stringValue\": \"\",\n            \"numberValue\": 4,\n            \"type\": 1\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Country\",\n            \"stringValue\": \"Hungary\",\n            \"numberValue\": 0,\n            \"type\": 0\n        },\n        {\n            \"id\": 4,\n            \"name\": \"City\",\n            \"stringValue\": \"Budapest\",\n            \"numberValue\": 0,\n            \"type\": 0\n        }\n    ],\n    \"image\": \"house1.jpg\",\n    \"imageList\": [\n        \"house1.jpg\"\n    ],\n    \"price\": 500,\n    \"priority\": 0,\n    \"title\": \"Admin háza\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/advertisements",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"advertisements"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "051c4ee4-5a10-4a62-a47a-b83bd4274091",
+						"exec": [
+							"pm.test(\"Test register\", function(){",
+							"    pm.response.to.have.status(200);",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.userName).eql(\"bob\");",
+							"    pm.expect(jsonData.email).eql(\"bob@gmail.com\");",
+							"    pm.expect(jsonData.phoneNumber).eql(\"123456789\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"bob\",\n    \"password\": \"Pass123456\",\n    \"email\": \"bob@gmail.com\",\n    \"phone\": \"123456789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/users",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "79ffa63a-18d9-468c-aebb-3aeddfcd3350",
+						"exec": [
+							"pm.test(\"Test login\", function(){",
+							"    pm.response.to.have.status(200);",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.success).eql(true);",
+							"    pm.expect(jsonData.userType).eql(0);",
+							"    pm.environment.set(\"token\", jsonData.token);",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"bob\",\n    \"password\": \"Pass123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostAdvertisementAfterLogin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "74c28efd-b655-4067-8814-f8431726098d",
+						"exec": [
+							"pm.test(\"Test create advetisement\", function(){",
+							"    pm.response.to.have.status(201);",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.id).eql(1);",
+							"    pm.expect(jsonData.userName).eql(\"admin\");",
+							"    pm.expect(jsonData.title).eql(\"Admin háza\");",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsInR5cCI6IkFkbWluaXN0cmF0b3IiLCJqdGkiOiI0YjZmNTg0MS0xOWVhLTQ3ZmUtODFiNi1mODVmNzIxMDg4NGUiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImFkbWluIiwiZXhwIjoxNTcyNDIwNTYxLCJpc3MiOiJrcmlzdG9mIiwiYXVkIjoia3Jpc3RvZiJ9.1IQ-lWtYllnPagYQtOxIy34WopI2MRCYJFwkmo29-BI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"categoryId\": 1,\n    \"description\": \"Szép ház.\",\n    \"details\": [\n        {\n            \"id\": 1,\n            \"name\": \"Estate type\",\n            \"stringValue\": \"House\",\n            \"numberValue\": 0,\n            \"type\": 2,\n            \"metaId\": 1\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Number of rooms\",\n            \"stringValue\": \"\",\n            \"numberValue\": 4,\n            \"type\": 1,\n            \"metaId\": 2\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Country\",\n            \"stringValue\": \"Hungary\",\n            \"numberValue\": 0,\n            \"type\": 0,\n            \"metaId\": 3\n        },\n        {\n            \"id\": 4,\n            \"name\": \"City\",\n            \"stringValue\": \"Budapest\",\n            \"numberValue\": 0,\n            \"type\": 0,\n            \"metaId\": 4\n        }\n    ],\n    \"image\": \"house1.jpg\",\n    \"imageList\": [\n        \"house1.jpg\"\n    ],\n    \"price\": 500,\n    \"priority\": 0,\n    \"title\": \"Admin háza\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/advertisements",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"advertisements"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

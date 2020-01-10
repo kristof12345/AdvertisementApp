@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AdvertisementApp.WebApi.Controllers.AdvertisementsController">
+    <Position X="0.5" Y="3.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQQAQCBAAQAAAAACAAiAEgCQAAA=</HashCode>
+      <FileName>Controllers\AdvertisementsController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="AdvertisementService" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AdvertisementApp.WebApi.Controllers.Controller">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAACAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdvertisementApp.WebApi.Controllers.ImageController">
+    <Position X="12" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAACAAAAAQAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Controllers\ImageController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdvertisementApp.WebApi.Controllers.LoginController">
+    <Position X="10.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Controllers\LoginController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdvertisementApp.WebApi.Controllers.MetaDetailsController">
+    <Position X="3.5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiAAAgAAAAAAA=</HashCode>
+      <FileName>Controllers\MetaDetailsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdvertisementApp.WebApi.Controllers.SubscriptionController">
+    <Position X="5.75" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAACAQAAACAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\SubscriptionController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdvertisementApp.WebApi.Controllers.UsersController">
+    <Position X="8" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAQAAgAAEAAAAgCBAQAAAAAAAAAAIAABAAAA=</HashCode>
+      <FileName>Controllers\UsersController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdvertisementApp.BusinessLogic.Services.AdvertisementService" Collapsed="true">
+    <Position X="5.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="12" />
+</ClassDiagram>

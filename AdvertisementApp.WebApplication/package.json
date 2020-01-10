@@ -1,0 +1,61 @@
+{
+  "name": "webapp",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/node": "10.12.18",
+    "@types/react": "16.7.20",
+    "@types/react-bootstrap-date-picker": "^4.0.6",
+    "@types/react-bootstrap-table": "^4.3.7",
+    "@types/react-datepicker": "^2.9.3",
+    "@types/react-dom": "16.0.11",
+    "@wojtekmaj/react-daterange-picker": "^2.4.0",
+    "axios": "^0.18.1",
+    "bootstrap": "^4.3.1",
+    "formik": "^1.5.8",
+    "react": "^16.10.2",
+    "react-bootstrap": "^1.0.0-beta.14",
+    "react-bootstrap-date-picker": "^5.1.0",
+    "react-bootstrap-table": "^4.3.1",
+    "react-bootstrap-validation": "^0.1.11",
+    "react-bootstrap4-form-validation": "^1.0.10",
+    "react-collapsible": "^2.6.0",
+    "react-datepicker": "^2.9.6",
+    "react-dom": "^16.10.2",
+    "react-form-validation-context": "^2.1.6",
+    "react-image-picker": "^1.1.1",
+    "react-infinite-scroll-component": "^4.5.3",
+    "react-paypal-express-checkout": "^1.0.5",
+    "react-redux": "^6.0.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^2.1.8",
+    "react-scroll-to": "^2.0.10",
+    "react-validation": "^3.0.7",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0",
+    "typescript": "3.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@types/react-redux": "^7.1.4",
+    "@types/react-router-dom": "^4.3.5",
+    "@types/redux-thunk": "^2.1.0",
+    "tslint": "^5.20.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^3.6.0"
+  }
+}
